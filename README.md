@@ -38,3 +38,5 @@ The script uses forceful termination to ensure the game is closed:
 - `Stop-Process -Force`
 
 Use this only when you are okay with closing the game immediately.
+
+Thanks for checking my project out! Happy Looping!
