@@ -37,6 +37,10 @@ The script uses forceful termination to ensure the game is closed:
 
 - `Stop-Process -Force`
 
+## Why?
+
+This game has serious issues closing, at least on my pc. The process will hang, and it interrupts the sleep functionality of your PC, so this is a minimal way of cleaning up the game process tree before your computer tries to sleep and subsequently black-screens. Also recovers some memory stuck allocated to the game.
+
 Use this only when you are okay with closing the game immediately.
 
 Thanks for checking my project out! Happy Looping!
