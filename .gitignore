@@ -1,0 +1,5 @@
+# PowerShell/Windows
+*.tmp
+*.log
+Thumbs.db
+Desktop.ini
