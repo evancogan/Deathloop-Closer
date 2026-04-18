@@ -66,9 +66,16 @@ if ($elapsed -gt 0) {
     Write-Host "`r                                                        `r" -NoNewline
 }
 
-Write-Host "Deathloop is now fully closed." -ForegroundColor Green
-Write-Host "You can safely sleep or shut down your PC." -ForegroundColor Green
 
+# I'm gonna be honest this is a pretty awful way to ensure there is enough time for the GPU drivers to clean up, 
+# but it should work in most cases. If you have a really slow PC or a lot of background processes, you might want to increase this timeout.
+# I moved off of windows 11 and haven't had a chance to test this on it, so if you have any issues please let me know and I can try to add some fixes.
+
+Write-Host "Deathloop is now fully closed." -ForegroundColor Green
+Start-Sleep -Seconds 1
+Write-Host "Please wait while gpu drivers clean up..." -ForegroundColor Yellow
+Start-Sleep -Seconds 5
+Write-Host "You can safely sleep or shut down your PC." -ForegroundColor Green
 Write-Host ""
 Write-Host "Window will close in 5 seconds..." -ForegroundColor DarkGray
 Start-Sleep -Seconds 5
